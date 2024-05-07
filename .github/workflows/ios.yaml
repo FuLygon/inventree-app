@@ -39,3 +39,8 @@ jobs:
         pod install
         cd ..
         flutter build ios --release --no-codesign --no-tree-shake-icons
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: ios-build
+        path: /Users/runner/work/inventree-app/inventree-app/build/ios/iphoneos
